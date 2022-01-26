@@ -5,28 +5,31 @@
   "platforms": {
     "android": {
       "transformGroup": "android",
-      "buildPath": "../android/app/src/main/res/values/",
+      "buildPath": "build/android/",
       "files": [
-        {
-          "destination": "ds_colors.xml",
-          "format": "android/resources",
-          "filter": {
-            "attributes": { "category": "color" }
-        }
-        },
         {
           "destination": "ds_dimens.xml",
           "format": "android/resources",
           "filter": {
-            "attributes": { "category": "size" }
+            "attributes": {
+              "category": "size"
+            }
           }
         },
+        {
+          "destination": "ds_colors.xml",
+          "format": "android/resources",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
         }
       ]
     },
     "compose": {
       "transformGroup": "compose",
-      "buildPath": "../android/app/src/main/design-system/",
+      "buildPath": "build/compose/",
       "files": [
         {
           "destination": "DSColor.kt",
@@ -44,6 +47,7 @@
           "format": "compose/object",
           "className": "DSSize",
           "packageName": "DSSize",
+          "type": "float",
           "filter": {
             "attributes": {
               "category": "size"

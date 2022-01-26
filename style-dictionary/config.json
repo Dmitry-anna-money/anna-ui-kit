@@ -29,10 +29,10 @@
       "buildPath": "../android/app/src/main/design-system/",
       "files": [
         {
-          "destination": "DsColor.kt",
+          "destination": "DSColor.kt",
           "format": "compose/object",
-          "className": "DsColor",
-          "packageName": "DsColor",
+          "className": "DSColor",
+          "packageName": "DSColor",
           "filter": {
             "attributes": {
               "category": "color"
@@ -40,11 +40,10 @@
           }
         },
         {
-          "destination": "DsSize.kt",
+          "destination": "DSSize.kt",
           "format": "compose/object",
-          "className": "DsSize",
-          "packageName": "DsSize",
-          "type": "float",
+          "className": "DSSize",
+          "packageName": "DSSize",
           "filter": {
             "attributes": {
               "category": "size"

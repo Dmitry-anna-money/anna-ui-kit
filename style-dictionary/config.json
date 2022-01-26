@@ -8,12 +8,19 @@
       "buildPath": "../android/app/src/main/res/values/",
       "files": [
         {
-          "destination": "ds_font_dimens.xml",
-          "format": "android/fontDimens"
+          "destination": "ds_colors.xml",
+          "format": "android/resources",
+          "filter": {
+            "attributes": { "category": "color" }
+        }
         },
         {
-          "destination": "ds_colors.xml",
-          "format": "android/colors"
+          "destination": "ds_dimens.xml",
+          "format": "android/resources",
+          "filter": {
+            "attributes": { "category": "size" }
+          }
+        },
         }
       ]
     },

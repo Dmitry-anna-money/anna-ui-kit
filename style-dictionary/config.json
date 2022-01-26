@@ -1,0 +1,139 @@
+{
+  "source": [
+    "tokens/**/*.json"
+  ],
+  "platforms": {
+    "android": {
+      "transformGroup": "android",
+      "buildPath": "../android/app/src/main/res/values/",
+      "files": [
+        {
+          "destination": "ds_font_dimens.xml",
+          "format": "android/fontDimens"
+        },
+        {
+          "destination": "ds_colors.xml",
+          "format": "android/colors"
+        }
+      ]
+    },
+    "compose": {
+      "transformGroup": "compose",
+      "buildPath": "../android/app/src/main/design-system/",
+      "files": [
+        {
+          "destination": "DsColor.kt",
+          "format": "compose/object",
+          "className": "DsColor",
+          "packageName": "DsColor",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "DsSize.kt",
+          "format": "compose/object",
+          "className": "DsSize",
+          "packageName": "DsSize",
+          "type": "float",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          }
+        }
+      ]
+    },
+    "ios": {
+      "transformGroup": "ios",
+      "buildPath": "build/ios/",
+      "files": [
+        {
+          "destination": "DSColor.h",
+          "format": "ios/colors.h",
+          "className": "DSColor",
+          "type": "DSColorName",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "DSColor.m",
+          "format": "ios/colors.m",
+          "className": "DSColor",
+          "type": "DSColorName",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "DSSize.h",
+          "format": "ios/static.h",
+          "className": "DSSize",
+          "type": "float",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          }
+        },
+        {
+          "destination": "DSSize.m",
+          "format": "ios/static.m",
+          "className": "DSSize",
+          "type": "float",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          }
+        }
+      ]
+    },
+    "ios-swift": {
+      "transformGroup": "ios-swift",
+      "buildPath": "build/ios-swift/",
+      "files": [
+        {
+          "destination": "DS.swift",
+          "format": "ios-swift/class.swift",
+          "className": "DS",
+          "filter": {}
+        }
+      ]
+    },
+    "ios-swift-separate-enums": {
+      "transformGroup": "ios-swift-separate",
+      "buildPath": "build/ios-swift/",
+      "files": [
+        {
+          "destination": "DSColor.swift",
+          "format": "ios-swift/enum.swift",
+          "className": "DSColor",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "DSSize.swift",
+          "format": "ios-swift/enum.swift",
+          "className": "DSSize",
+          "type": "float",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

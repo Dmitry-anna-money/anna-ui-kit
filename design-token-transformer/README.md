@@ -46,7 +46,7 @@ You should be able to see the action running in your GitHub repo and have all th
 ##### 7. Optional: Adapt the `transform-tokens` script in the [package.json](./package.json).
 If you want to you can do something else when the tokens are pushed to the server you can change the `transform-tokens` script in the [package.json](./package.json). However note that the name of the script `transform-tokens` should not be changed.
 
-##### 8. Optional: Adapt the [github workflow](.github/workflows/transform-tokens.yml)
+##### 8. Optional: Adapt the [github workflow](../.github/workflows/transform-tokens.yml)
 You can adapt the workflow file if you need to. Just make sure the keep the current setup working.
 
 #### Personal access token

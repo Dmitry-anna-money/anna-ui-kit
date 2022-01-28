@@ -34,7 +34,7 @@ jobs:
           node-version: 14.x
       # We now run npm i to install all dependencies and run the "transfrom" script
       - name: Transform design tokens
-        run: 'cd style-dictionary && npm i style-dictionary && style-dictionary build'
+        run: 'cd style-dictionary && $ npm install -g style-dictionary && style-dictionary build'
       # We now create a pull request 
       - name: Create PR 
         uses: peter-evans/create-pull-request@v3

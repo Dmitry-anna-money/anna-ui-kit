@@ -26,13 +26,11 @@ jobs:
         run: 'cd style-dictionary && npm install -g style-dictionary && style-dictionary build'
       # We now create a pull request 
       - name: Create PR 
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v3.10.1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Tokens updated"
           title: "Design tokens updated"
           body: "Design tokens have been updated via Figma and need to be reviewed."
-          branch: design-tokens
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # this parameter is optional and defaults to master but I am using main
-          BRANCH_NAME: 'main'
+          branch: ${{ github.ref }}
+          base: main

@@ -1,6 +1,6 @@
 # Name of the action visible in the action overview
 name: Transform tokens send from figma
-# this triggers the action when a post to "https://api.github.com/repos/:username/:repo/dispatches" comes in
+# this triggers the action when a push to design-tokens branch
 on:
   push:
     branches:    
@@ -14,18 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # this lets us work in the actual repository 
-      - uses: actions/checkout@master
-      # this creates a json file from the stringified json from the request body
-      - name: create json from request body
-        id: create-json
-        uses: jsdaniell/create-json@1.1.2
-        with:
-          # it uses the name from your settings that was send as then tokenFileName parameter
-          name: 'design-tokens.json'
-          # it uses the json string that was send as the tokens parameter
-          json: ${{ github.event.client_payload.tokens }}
-          # it uses the directory named "tokens" to store this json file (change this if you changed it above to use a different folder)
-          dir: 'style-dictionary/tokens'
+      # - uses: actions/checkout@master
       # we now initialize node to run amazon style dictionary to compile the tokens
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1

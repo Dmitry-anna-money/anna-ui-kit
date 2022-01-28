@@ -9,21 +9,11 @@
       "files": [
         {
           "destination": "ds_dimens.xml",
-          "format": "android/resources",
-          "filter": {
-            "attributes": {
-              "category": "size"
-            }
-          }
+          "format": "android/fontDimens"
         },
         {
           "destination": "ds_colors.xml",
-          "format": "android/resources",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          }
+          "format": "android/colors"
         }
       ]
     },

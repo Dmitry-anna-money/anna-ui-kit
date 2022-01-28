@@ -32,5 +32,5 @@ jobs:
           commit-message: "Tokens updated"
           title: "Design tokens updated"
           body: "Design tokens have been updated via Figma and need to be reviewed."
-          branch: main
-          base: ${{ github.ref }}
+          branch: design-tokens
+          base: main

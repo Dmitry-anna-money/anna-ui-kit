@@ -41,6 +41,6 @@ jobs:
       with:
         arguments: publish
       env:
-         working-directory: ./android
+         working-directory: android
          USERNAME: ${{ github.actor }}
          TOKEN: ${{ secrets.GITHUB_TOKEN }}

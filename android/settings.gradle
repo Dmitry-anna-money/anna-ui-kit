@@ -7,4 +7,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ui-kit"
-include ':app'
+include ':tiger-ui-kit'
+include ':tiger-ui-kit-demo'

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<dimen name="sizing_md">36dp</dimen> <!--null-->
+	<dimen name="sizing_lg">48dp</dimen> <!--null-->
+	<dimen name="sizing_sm">24dp</dimen> <!--null-->
+	<dimen name="tigerds_navbar_bottom_icons_size">@dimen/sizing_sm</dimen> <!--null-->
+</resources>

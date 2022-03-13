@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<dimen name="lineHeight_lg">28dp</dimen> <!--null-->
+	<dimen name="lineHeight_md">20dp</dimen> <!--null-->
+	<dimen name="lineHeight_sm">16dp</dimen> <!--null-->
+	<dimen name="lineHeight_xs">14dp</dimen> <!--null-->
+	<dimen name="lineHeight_xl">40dp</dimen> <!--null-->
+</resources>

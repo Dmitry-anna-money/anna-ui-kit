@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<dimen name="opacityLevel_semiopaque">80.0f</dimen> <!--null-->
+	<dimen name="opacityLevel_intense">64.0f</dimen> <!--null-->
+	<dimen name="opacityLevel_medium">32.0f</dimen> <!--null-->
+	<dimen name="opacityLevel_light">16.0f</dimen> <!--null-->
+	<dimen name="opacityLevel_semitransparent">8.0f</dimen> <!--null-->
+</resources>

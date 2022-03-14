@@ -4,7 +4,7 @@ import java.io.File
 
 fun main(args: Array<String>) {
     val tokenPath = "../tokens/tokens.json"
-    val outputDir = "../android/app/src/main/res"
+    val outputDir = "../android/tiger-ui-kit/src/main/res"
     val parser = Parser()
     val saver = XmlSaver()
 

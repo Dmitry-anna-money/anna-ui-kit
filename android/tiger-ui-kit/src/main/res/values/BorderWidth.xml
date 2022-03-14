@@ -7,5 +7,4 @@
 	<dimen name="borderWidth_thick">4dp</dimen> <!--null-->
 	<dimen name="borderWidth_heavy">8dp</dimen> <!--null-->
 	<dimen name="tigerds_input_chat_text_field_resting_borderWidth">@dimen/borderWidth_hairline</dimen> <!--null-->
-	<dimen name="tigerds_input_chat_search_borderWidth">@dimen/borderWidth_hairline</dimen> <!--null-->
 </resources>

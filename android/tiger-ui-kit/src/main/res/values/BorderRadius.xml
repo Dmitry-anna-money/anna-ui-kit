@@ -15,7 +15,6 @@
 	<dimen name="tigerds_navbar_chat_bottom_borderRadius_top_left">@dimen/borderRadius_md</dimen> <!--null-->
 	<dimen name="tigerds_navbar_chat_bottom_borderRadius_top_right">@dimen/borderRadius_md</dimen> <!--null-->
 	<dimen name="tigerds_navbar_bottom_borderRadius">@dimen/borderRadius_none</dimen> <!--null-->
-	<dimen name="tigerds_navbar_bottom_background_color">@dimen/neutral_high_pure</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_anna_start_borderRadius_bottom_left">@dimen/borderRadius_xs</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_anna_start_borderRadius_bottom_right">@dimen/borderRadius_lg</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_anna_start_borderRadius_top_right">@dimen/borderRadius_lg</dimen> <!--null-->

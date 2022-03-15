@@ -91,8 +91,8 @@
 	<dimen name="tigerds_chat_bubble_user_mid_borderRadius_top_left">@dimen/borderRadius_lg</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_user_end_borderRadius_bottom_left">@dimen/borderRadius_lg</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_user_end_borderRadius_bottom_right">@dimen/borderRadius_lg</dimen> <!--null-->
-	<dimen name="tigerds_chat_bubble_user_end_borderRadius_top_right">@dimen/borderRadius_lg</dimen> <!--null-->
-	<dimen name="tigerds_chat_bubble_user_end_borderRadius_top_left">@dimen/borderRadius_xs</dimen> <!--null-->
+	<dimen name="tigerds_chat_bubble_user_end_borderRadius_top_right">@dimen/borderRadius_xs</dimen> <!--null-->
+	<dimen name="tigerds_chat_bubble_user_end_borderRadius_top_left">@dimen/borderRadius_lg</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_user_mediaContainer_start_borderRadius_bottom_left">@dimen/borderRadius_xs</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_user_mediaContainer_start_borderRadius_bottom_right">@dimen/borderRadius_xs</dimen> <!--null-->
 	<dimen name="tigerds_chat_bubble_user_mediaContainer_start_borderRadius_top_right">@dimen/borderRadius_md</dimen> <!--null-->

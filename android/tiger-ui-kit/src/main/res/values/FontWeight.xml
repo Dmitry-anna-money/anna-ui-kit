@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-	<attr name="fontWeight_bold">Bold</attr> <!--null-->
-	<attr name="fontWeight_medium">Medium</attr> <!--null-->
-	<attr name="fontWeight_regular">Regular</attr> <!--null-->
-	<attr name="fontWeight_extrabold">Extrabold</attr> <!--null-->
-	<attr name="fontWeight_semiBold">semiBold</attr> <!--null-->
+	<string name="fontWeight_bold">Bold</string> <!--null-->
+	<string name="fontWeight_medium">Medium</string> <!--null-->
+	<string name="fontWeight_regular">Regular</string> <!--null-->
+	<string name="fontWeight_extrabold">Extrabold</string> <!--null-->
+	<string name="fontWeight_semiBold">semiBold</string> <!--null-->
 </resources>

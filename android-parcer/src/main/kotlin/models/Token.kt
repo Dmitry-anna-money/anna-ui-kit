@@ -2,7 +2,7 @@ package models
 
 data class Token(
     val name: List<String>,
-    val value: Value,
+    var value: Value,
     val description: String?,
 ) {
     sealed class Value {
@@ -19,7 +19,6 @@ data class Token(
             val lineHeight: Value,
             val fontSize: Value,
             val letterSpacing: Value,
-            val paragraphSpacing: Value,
             val textCase: Value,
             val textDecoration: Value,
         ) : Value()

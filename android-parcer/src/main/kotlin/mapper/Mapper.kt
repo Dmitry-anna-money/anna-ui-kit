@@ -6,12 +6,12 @@ import models.Types
 
 fun mapType(type: String) = Types.values().find { it.type == type }
 
-fun mapToken(value: Any): Token.Value {
+fun mapToken(value: Any, hardCodedSp: Boolean = false): Token.Value {
     if (value is String)
         return when {
             value.contains("[{$}]".toRegex()) -> Link(value.asPath())
             value.contains("linear-gradient") -> Gradient
-            value.contains("dp|px".toRegex()) || value.all { it.isDigit() } -> Dp(value.filter { it.isDigit() }.toInt())
+            value.contains("dp|px".toRegex()) || value.all { it.isDigit() } -> value.filter { it.isDigit() }.toInt().let { if (hardCodedSp) Sp(it) else Dp(it) }
             value.contains("sp") -> Sp(value.filter { it.isDigit() }.toInt())
             value.contains("%") -> Percent(value.filter { it.isDigit() }.toInt())
             value.contains(".") -> Floating(value.filter { it.isDigit() }.toFloat())
@@ -27,7 +27,6 @@ fun mapToken(value: Any): Token.Value {
                 lineHeight = mapToken(value["lineHeight"] as String),
                 fontSize = mapToken(value["fontSize"] as String),
                 letterSpacing = mapToken(value["letterSpacing"] as String),
-                paragraphSpacing = mapToken(value["paragraphSpacing"] as String),
                 textCase = mapToken(value["textCase"] as String),
                 textDecoration = mapToken(value["textDecoration"] as String),
             )

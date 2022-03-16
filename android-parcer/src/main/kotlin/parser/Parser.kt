@@ -16,12 +16,54 @@ class Parser {
         parseJson(map)
         println("tokens found: $count")
         println("tokens parsed: ${tokens.values.sumOf { it.size }}")
+
+        replaceLinksWithValues()
+
 //        tokens.forEach {
 //            println(it.key)
 //            println(it.value.joinToString("\n"))
 //        }
 
         return tokens
+    }
+
+    private fun replaceLinksWithValues() {
+        println("replacing links with values")
+        tokens.values.map { it.filter { it.value is Token.Value.Link } }.sumOf { it.size }
+            .let { println("Links count before: $it") }
+
+        val allTokens = tokens.values.flatten()
+        tokens.values.forEach {
+            it.forEach {
+                if (it.value is Token.Value.Link) it.value = replaceLinkWithValue(it.value, allTokens)
+                if (it.value is Token.Value.Typography) {
+                    it.value = Token.Value.Typography(
+                        fontFamily = replaceLinkWithValue((it.value as Token.Value.Typography).fontFamily, allTokens),
+                        fontWeight = replaceLinkWithValue((it.value as Token.Value.Typography).fontWeight, allTokens),
+                        lineHeight = replaceLinkWithValue((it.value as Token.Value.Typography).lineHeight, allTokens),
+                        fontSize = replaceLinkWithValue((it.value as Token.Value.Typography).fontSize, allTokens),
+                        letterSpacing = replaceLinkWithValue(
+                            (it.value as Token.Value.Typography).letterSpacing,
+                            allTokens
+                        ),
+                        textCase = replaceLinkWithValue((it.value as Token.Value.Typography).textCase, allTokens),
+                        textDecoration = replaceLinkWithValue(
+                            (it.value as Token.Value.Typography).textDecoration,
+                            allTokens
+                        ),
+                    )
+                }
+            }
+        }
+
+        tokens.values.map { it.filter { it.value is Token.Value.Link } }.sumOf { it.size }
+            .let { println("Links count after: $it") }
+    }
+
+    private fun replaceLinkWithValue(value: Token.Value, allTokens: List<Token>): Token.Value {
+        if (value !is Token.Value.Link) return value
+        val foundToken = allTokens.find { it.name.drop(1) == value.link } ?: error("Cannot find token with name: ${value.link}")
+        return foundToken.value
     }
 
     private fun parseJson(json: Map<String, Any>, path: List<String> = emptyList()): Boolean {
@@ -176,7 +218,6 @@ class Parser {
     }
 
     private fun parseLineHeight(path: List<String>, value: String, description: String?) {
-        if (value == "auto") return
         addToken(
             Types.LineHeight,
             Token(
@@ -192,7 +233,7 @@ class Parser {
             Types.FontSize,
             Token(
                 path.parseName,
-                mapToken(value),
+                mapToken(value, true),
                 description,
             ),
         )
@@ -257,5 +298,5 @@ class Parser {
         tokens.computeIfAbsent(key) { ArrayList() }.add(value)
     }
 
-    private val List<String>.parseName get() = map { it.replace("-", "_").replace(":", "") }
+    private val List<String>.parseName get() = map { it.replace("-", "_").replace(":", "").split("_") }.flatten()
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-	<attr name="textCase_none">none</attr> <!--null-->
+	<string name="textCase_none">none</string> <!--null-->
 </resources>

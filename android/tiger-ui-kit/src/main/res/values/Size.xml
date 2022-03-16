@@ -7,8 +7,8 @@
 	<dimen name="sizing_xxl">74dp</dimen> <!--null-->
 	<dimen name="sizing_xl">52dp</dimen> <!--null-->
 	<dimen name="sizing_xxxl">112dp</dimen> <!--null-->
-	<dimen name="tigerds_navbar_bottom_icons_size">@dimen/sizing_sm</dimen> <!--null-->
-	<dimen name="tigerds_chat_bubble_anna_mediaContainer_img_size">@dimen/sizing_xl</dimen> <!--null-->
-	<dimen name="tigerds_chat_bubble_reply_payloadContainer_size_height">@dimen/sizing_xxl</dimen> <!--null-->
-	<dimen name="tigerds_chat_bubble_reply_transactionContainer_size_height">@dimen/sizing_xxxl</dimen> <!--null-->
+	<dimen name="tigerds_navbar_bottom_icons_size">24dp</dimen> <!--null-->
+	<dimen name="tigerds_chat_bubble_anna_mediaContainer_img_size">52dp</dimen> <!--null-->
+	<dimen name="tigerds_chat_bubble_reply_payloadContainer_size_height">74dp</dimen> <!--null-->
+	<dimen name="tigerds_chat_bubble_reply_transactionContainer_size_height">112dp</dimen> <!--null-->
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-	<attr name="fontFamily_highlight">Proxima Nova</attr> <!--null-->
-	<attr name="fontFamily_base">Inter</attr> <!--null-->
+	<string name="fontFamily_highlight">Proxima Nova</string> <!--null-->
+	<string name="fontFamily_base">Inter</string> <!--null-->
 </resources>

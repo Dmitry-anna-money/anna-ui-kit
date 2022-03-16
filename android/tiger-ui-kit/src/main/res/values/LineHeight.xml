@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+	<string name="lineHeight_default">auto</string> <!--null-->
 	<dimen name="lineHeight_lg">28dp</dimen> <!--null-->
 	<dimen name="lineHeight_md">20dp</dimen> <!--null-->
 	<dimen name="lineHeight_sm">16dp</dimen> <!--null-->

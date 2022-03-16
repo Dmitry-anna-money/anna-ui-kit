@@ -4,224 +4,224 @@
 	<style name="Base_Heading_Display">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="android:textSize">34sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_X_Large">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">28dp</item>
 		<item name="android:textSize">24sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_Large">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">18sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_Medium">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">16sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_Small_Short">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_Small_Long">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_X_small_Short">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Heading_X_Small_Long">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_X_Large">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">28dp</item>
 		<item name="android:textSize">24sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_Large">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">18sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_Medium">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">16sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_Small_Short">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_Small_Long">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_Small_Long_Strong">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_X_Small_Short">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Body_X_Small_Long">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Label_Large">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Label_FAB">
 		<item name="android:fontFamily">@font/inter_semibold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Label_Medium">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Label_Small">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">14dp</item>
 		<item name="android:textSize">10sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Caption_Strong">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="android:textSize">10sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Caption_Default">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="android:textSize">10sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Base_Caption_xxs">
 		<item name="android:fontFamily">@font/inter_regular</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_X_small_Short">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_X_Small_Long">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Display_Extrabold">
 		<item name="android:fontFamily">@font/proximanova_extrabold</item>
 		<item name="android:textSize">34sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_X_Large_Extrabold">
 		<item name="android:fontFamily">@font/proximanova_extrabold</item>
 		<item name="lineHeight">40dp</item>
 		<item name="android:textSize">24sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Display">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="android:textSize">34sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_X_Large">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">28dp</item>
 		<item name="android:textSize">24sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Large">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">18sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Medium">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">16sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Small_Short">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="Highlight_Heading_Small_Long">
 		<item name="android:fontFamily">@font/proximanova_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="tigerds_navbar_chat_top_textAmount">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">18sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="tigerds_navbar_chat_top_accountholderName">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">14sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="tigerds_navbar_chat_top_bankInformation">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">16dp</item>
 		<item name="android:textSize">12sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="tigerds_chat_bubble_text">
 		<item name="android:fontFamily">@font/inter_medium</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">16sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 	<style name="tigerds_chat_bubble_textStrong">
 		<item name="android:fontFamily">@font/inter_bold</item>
 		<item name="lineHeight">20dp</item>
 		<item name="android:textSize">16sp</item>
-		<item name="android:lineSpacingExtra">0dp</item>
+		<item name="android:letterSpacing">0.0f</item>
 	</style> <!--null-->
 </resources>

@@ -233,7 +233,7 @@ class Parser {
             Types.FontSize,
             Token(
                 path.parseName,
-                mapToken(value, true),
+                mapToken(value, fontSize = true),
                 description,
             ),
         )
@@ -244,7 +244,7 @@ class Parser {
             Types.LetterSpacing,
             Token(
                 path.parseName,
-                mapToken(value),
+                mapToken(value, letterSpacing = true),
                 description,
             ),
         )

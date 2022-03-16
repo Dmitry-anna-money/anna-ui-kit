@@ -100,7 +100,7 @@ class XmlSaver {
                 "\t\t<item name=\"android:fontFamily\">@font/${(fontFamily as Token.Value.Text).text.replace(" ", "").lowercase()}_${(fontWeight as Token.Value.Text).text.lowercase()}</item>\n" +
                 (if (lineHeight is Token.Value.Text && lineHeight.text == "auto") "" else "\t\t<item name=\"lineHeight\">${lineHeight.parseValue("@dimen/")}</item>\n") +
                 "\t\t<item name=\"android:textSize\">${fontSize.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:lineSpacingExtra\">${letterSpacing.parseValue("@dimen/")}</item>\n"
+                "\t\t<item name=\"android:letterSpacing\">${letterSpacing.parseValue("@dimen/")}</item>\n"
         //TODO
         Token.Value.BoxShadow -> ""
         //TODO

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-	<dimen name="letterSpacing_default">0dp</dimen> <!--null-->
+	<dimen name="letterSpacing_default">0.0f</dimen> <!--null-->
 </resources>

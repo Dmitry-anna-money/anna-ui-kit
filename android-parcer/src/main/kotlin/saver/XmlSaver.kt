@@ -92,7 +92,7 @@ class XmlSaver {
         is Token.Value.Color -> color
         is Token.Value.Dp -> "${dp}dp"
         is Token.Value.Sp -> "${sp}sp"
-        is Token.Value.Floating -> "${floating}f"
+        is Token.Value.Floating -> "$floating"
         is Token.Value.Percent -> "${percent}%"
         is Token.Value.Text -> text
         is Token.Value.Link -> linkPrefix + link.parseLink

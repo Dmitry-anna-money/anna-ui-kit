@@ -9,7 +9,7 @@ class XmlSaver {
         Color,
         Dimen,
         TextStyle,
-        Attr,
+        String,
     }
 
     fun save(resourceDir: String, tokens: Map<Types, List<Token>>) {
@@ -24,24 +24,17 @@ class XmlSaver {
                 writer.write("<resources>")
                 writer.newLine()
                 entry.value.forEach { token ->
-                    val xml = when (entry.key) {
-                        Types.BorderRadius -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.BorderWidth -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.BoxShadow -> ""
-                        Types.Color -> XmlAttr.Color.createXmlAttr(token)
-                        Types.FontFamily -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.FontSize -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.FontWeight -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.LetterSpacing -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.LineHeight -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.Opacity -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.Other -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.ParagraphSpacing -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.Size -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.Spacing -> XmlAttr.Dimen.createXmlAttr(token)
-                        Types.TextCase -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.TextDecoration -> XmlAttr.Attr.createXmlAttr(token)
-                        Types.Typography -> XmlAttr.TextStyle.createXmlAttr(token)
+                    val xml = when (token.value) {
+                        Token.Value.BoxShadow -> ""
+                        is Token.Value.Color -> XmlAttr.Color.createXmlAttr(token)
+                        is Token.Value.Dp -> XmlAttr.Dimen.createXmlAttr(token)
+                        is Token.Value.Floating -> XmlAttr.Dimen.createXmlAttr(token)
+                        Token.Value.Gradient -> ""
+                        is Token.Value.Link -> ""
+                        is Token.Value.Percent -> XmlAttr.Dimen.createXmlAttr(token)
+                        is Token.Value.Sp -> XmlAttr.Dimen.createXmlAttr(token)
+                        is Token.Value.Text -> XmlAttr.String.createXmlAttr(token)
+                        is Token.Value.Typography -> XmlAttr.TextStyle.createXmlAttr(token)
                     }
                     writer.write(xml)
                     writer.newLine()
@@ -56,7 +49,7 @@ class XmlSaver {
             XmlAttr.Color -> createColor(token)
             XmlAttr.Dimen -> createDimen(token)
             XmlAttr.TextStyle -> createTextStyle(token)
-            XmlAttr.Attr -> createAttr(token)
+            XmlAttr.String -> createString(token)
         }
     }
 
@@ -84,17 +77,17 @@ class XmlSaver {
         return "\t<style name=\"$name\">$value\t</style> <!--$description-->"
     }
 
-    private fun createAttr(token: Token): String {
+    private fun createString(token: Token): String {
         val name = token.name.parseName
-        val value = token.value.parseValue("@attr/")
+        val value = token.value.parseValue("@string/")
         val description = token.description
 
-        return "\t<attr name=\"$name\">$value</attr> <!--$description-->"
+        return "\t<string name=\"$name\">$value</string> <!--$description-->"
     }
 
     private val List<String>.parseName get() = drop(1).snakeCase
     private val List<String>.parseLink get() = snakeCase
-    private val List<String>.snakeCase get() = joinToString("_")
+    private val List<String>.snakeCase get() = joinToString("_").replace(" ", "_")
     private fun Token.Value.parseValue(linkPrefix: String): String = when (this) {
         is Token.Value.Color -> color
         is Token.Value.Dp -> "${dp}dp"
@@ -104,14 +97,10 @@ class XmlSaver {
         is Token.Value.Text -> text
         is Token.Value.Link -> linkPrefix + link.parseLink
         is Token.Value.Typography -> "\n" +
-                "\t\t<item name=\"android:fontFamily\">${fontFamily.parseValue("@string/")}</item>\n" +
-                "\t\t<item name=\"android:fontWeight\">${fontWeight.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:lineHeight\">${lineHeight.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:fontSize\">${fontSize.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:letterSpacing\">${letterSpacing.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:paragraphSpacing\">${paragraphSpacing.parseValue("@dimen/")}</item>\n" +
-                "\t\t<item name=\"android:textCase\">${textCase.parseValue("@attr/")}</item>\n" +
-                "\t\t<item name=\"android:textDecoration\">${textDecoration.parseValue("@attr/")}</item>\n"
+                "\t\t<item name=\"android:fontFamily\">@font/${(fontFamily as Token.Value.Text).text.replace(" ", "").lowercase()}_${(fontWeight as Token.Value.Text).text.lowercase()}</item>\n" +
+                (if (lineHeight is Token.Value.Text && lineHeight.text == "auto") "" else "\t\t<item name=\"lineHeight\">${lineHeight.parseValue("@dimen/")}</item>\n") +
+                "\t\t<item name=\"android:textSize\">${fontSize.parseValue("@dimen/")}</item>\n" +
+                "\t\t<item name=\"android:lineSpacingExtra\">${letterSpacing.parseValue("@dimen/")}</item>\n"
         //TODO
         Token.Value.BoxShadow -> ""
         //TODO
